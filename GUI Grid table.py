@@ -1,0 +1,25 @@
+from tkinter import *
+
+root=Tk()
+
+root.title("Grid system in Tkinter")
+
+label00=Label(root,text="00")
+label01=Label(root,text="01")
+label02=Label(root,text="02")
+label10=Label(root,text="10")
+label11=Label(root,text="11")
+label12=Label(root,text="12")
+label20=Label(root,text="20")
+label21=Label(root,text="21")
+label22=Label(root,text="22")
+label00.grid(row=0,column=0)
+label01.grid(row=0,column=1)
+label02.grid(row=0,column=2)
+label10.grid(row=1,column=0)
+label11.grid(row=1,column=1)
+label12.grid(row=1,column=2)
+label20.grid(row=2,column=0)
+label21.grid(row=2,column=1)
+label22.grid(row=2,column=2)
+root.mainloop()
