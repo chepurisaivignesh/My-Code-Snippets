@@ -9,6 +9,7 @@ class Linkedlist:
         # print("New Linked List is Created")
 
     def showLL(self):
+        print(self.__class__.__name__)
         if self.head==None:
             print("The Linked List is empty.")
         else:
@@ -34,12 +35,14 @@ class Linkedlist:
     def add_end(self,data):
         newnode=Node(data)
         if self.head==None:
+            newnode.ref=self.head
             self.head=newnode
             # print("New node is added at the start and it is the new head.")
         else:
             k=self.head
             while k.ref is not None:
                 k=k.ref
+                # print(k)
             k.ref=newnode
             # print("New node is added at the end .")
             
@@ -110,3 +113,15 @@ class Linkedlist:
                 print("There is no node of the given value.")
             else:
                 u.ref=u.ref.ref
+L=Linkedlist()
+L.add_begin(20)
+L.add_begin(10)
+L.showLL()
+L.add_end(30)
+L.showLL()
+L.add_begin(40)
+L.showLL()
+L.add_after_node(40,20)
+L.showLL()
+L.add_after_node(50,40)
+L.showLL()
